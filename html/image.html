@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>이미지태그 실습</title>
+<style>
+a {
+  text-decoration: none;
+  color: inherit; /*initial;*/
+}
+</style>
+</head>
+<body>
+<h2>링크</h2>
+<p>
+a태그: 링크는 현재 웹 페이지에서 다른 페이지로 연결하기 위한 형태
+a태그로 링크를 적용한다
+</p>
+
+<h2 id='no1'>이미지 태그</h2>
+<p>img 태그: 이미지태그<br>
+     폴더내의 이미지 표현,웹상의 이미지 표현
+</p>
+<p>
+링크할 페이지를 창에서 연결하려면 target 속성값을 _blank 로 지정<br>
+지정하지 않으면 기본 _self이다<br>
+현재 페이지에서 특정위치로 연결할 수도 있는데 이런 형태를 앵커(anchor)라고 한다
+</p>
+<p><a target='_blank' href='http://naver.com'>네이버 연결</a></p>
+<h3 id='no2'><a target='_self' href='#no1'>폴더내의 이미지 표현</a></h3>
+<!-- 현재 페이지가 동일한 폴더에 있는 이미지파일을 찾아가는 경우 -->
+<hr>
+<!-- 현재 페이지가 있는 폴더가 아닌 폴더에 있는 이미지파일을 찾아가는 경우
+. : 현재 위치, .. :상위폴더로 나간 위치
+alt: 이미지파일이 정상 로딩이 되지 않는 경우 이미지에 대한 설명을 넣는 속성
+title: 마우스를 갖다 대었을때 보여지는 설명을 말풍선으로 넣는 속성
+ -->
+<img src='../images/html/very.jpg' width="400px" height="500px">
+<img src='../images/lee.jpg' title="백합" alt="평화이미지" style="width:400px; height:500px;">
+<img src='../images/lee1.jpg' alt="평화이미지" style="width:400px; height:500px;">
+<hr>
+<h3><a href='#no2'>엡상의 이미지표현</a></h3>
+<img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA4MTJfMTI1%2FMDAxNTk3MjE0NzgwNTk3.Da1coZ5drL83SEQPvT35KKcHLG8aobXaHKNvd69RGD8g.wEd0MY-z0_ihc-kCfOphXEJUPejMyRjoIESLT11lw-0g.JPEG.kyk123147%2FKakaoTalk_20200812_153407455_10.jpg&type=sc960_832'>
+<img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDJfMjc4%2FMDAxNjA0MzI0MzE0MDU1.W7wOv1qsJwNLcGWXz6wGkrEKw9WtzcDlQ_l6xjU3zJkg.FNCzrmX69_4tUUXKMxiMpONZQfvQCjBfSUiV3SMdBc4g.GIF.duaakstjr%2Ffdfdfdfd.gif&type=sc960_832_gif'>
+<p><a href='#'>맨 위로</a></p>
+</body>
+</html>

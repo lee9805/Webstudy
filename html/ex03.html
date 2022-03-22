@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table {border-collapse: collapse; width:600px;}
+th,td {border : 1px solid #222; padding: 10px 10px;}
+textarea {width:300px; height:200px; resize:none;}
+</style>
+</head>
+<body>
+<input type='button' value='닫기' onclick='window.close()'>
+<!-- 입력항목의 값(데이터)을 전송하려면 form태그에 선언한다.
+각 입력항목은 name 속성을 가져야 한다
+: 입력항목의 데이터가 name속성의 파라미터명으로 전송되 -->
+<form autocomplete='off' method='post' enctype='multipart/form-data'>
+<table>
+<caption><h1>회원가입 정보</h1></caption>
+   <colgroup>
+       <col width='100px'>
+       <col width='200px'>
+   </colgroup>
+  <tr>
+     <th>아이디 </th>
+     <td><input type='text' name='id' required placeholder='아이디'></td>
+  </tr>
+  <tr>
+     <th>비밀번호</th> 
+     <td><input type='password' name='password'required placeholder='비밀번호'></td>
+ </tr>
+ <tr>
+    <th>비밀번호 확인</th>
+    <td> <input type='password' name='password_ck'required placeholder='비밀번호'></td>
+ </tr>
+ <tr>
+     <th>이름</th>
+     <td><input type='text' name='name'required placeholder='이름'></td>
+  </tr>
+<tr>
+     <th> 성별</th>
+     <td><input type='radio' name='gender' value='남'>남
+         <input type='radio' name='gender' value='여'>여</td>
+</tr>
+<tr>  
+     <th>전화번호</th>
+     <td><select name="componion">
+          <option>02</option>
+          <option>07</option>
+          <option>010</option>
+          <option>011</option>
+          <option>012</option>
+  </select> <input type='text' name='phone' required placeholder='전화번호' >-
+            <input type='text' name='phone' required placeholder='전화번호' ></td>
+</tr>
+<tr>
+      <th>sms 수신여부</th> 
+      <td><input type='checkbox' name='sms' value='수신함'>수신함</td>
+</tr>
+<tr>
+      <th>이메일</th>
+      <td><input type='text' name='email'>@
+          <select name='componion'>
+              <option>naver.com</option>
+              <option>gmail.com</option>
+              <option>hanmail.net</option>
+          </select></td>
+
+</tr>
+<tr>
+      <th>파일 선택</th>
+      <td><input type="file" name="filename"></td>
+</tr>
+<tr>
+   <th colspan='2'><input type='submit' value='회원가입'></th>
+</tr>
+
+</table>
+</form>
+</body>
+</html>
