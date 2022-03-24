@@ -1,4 +1,7 @@
 @charset "UTF-8";
-body { text-align: center; }
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+* {font-family: 'Nanum Pen Script', cursive; }
+body { text-align: center; margin:0 auto; }
 table { border-collapse: collapse; margin:0 auto; }
 th, td{ border: 1px solid #222; padding: 5px 10px; }
+ul { list-style-type:none; padding: 0 }

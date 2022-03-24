@@ -21,7 +21,7 @@ body {font-family: 'Nanum Pen Script', cursive; }
 }
 
 /* 말줄임되어진 태그의 내용에 대해 마우스를 갖다 올렸을때 보이게 처리 */
-#content:hover{ overflow: visible;}
+#content:hover { overflow: visible;}
 /* nomal: 공백은 한개로 합쳐져 보인다, 여러 줄도 병합되어 한줄로 합쳐짐,
           자동줄 바꿈됨
    nowrap: 공백은 한개로 합쳐져 보인다,
@@ -61,6 +61,8 @@ ul#menu { display: inline-block; width: 200px;
       /* cover: 배경이미지를 확대/축소해서 요소전체를 채우는 형태 */ }
 footer {font-size :10px; }
 address { font-style:inherit; }
+/* footer, address 는 이름을 가진 div 에 해당한다 */
+table tr* {text-decoration: underline }
 </style>
 </head>
 <body>
