@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Ami R';
+    src: url('AmiR-HM.woff2') format('woff2'),
+        url('AmiR-HM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

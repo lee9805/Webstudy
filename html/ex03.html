@@ -29,7 +29,7 @@ form 태그내에 file 태그를 전송하는 경우
    </colgroup>
   <tr>
      <th>아이디 </th>
-     <td><input type='text' name='id' required placeholder='아이디'></td>
+     <td><input type='text' name='id' autofocus placeholder='아이디'></td>
   </tr>
   <tr>
      <th>비밀번호</th> 
@@ -75,10 +75,11 @@ form 태그내에 file 태그를 전송하는 경우
 </tr>
 <tr>
       <th>파일 선택</th>
-      <td><input type="file" name="filename"></td>
+      <td><lable><input type="file"  name="filename"></lable></td>
 </tr>
 <tr>
-   <th colspan='2'><input type='submit' value='회원가입'></th>
+   <th colspan='2'><input type='submit' value='회원가입'>
+                   <input type='reset' value='초기화'></th>
 </tr>
 
 </table>
