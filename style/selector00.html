@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selector00</title>
+<style>
+table { border-collapse: collapse;}
+table tr { border-bottom: 1px solid #ccc; height: 35px;}
+table tr:first-child { border-top: 1px solid #777 } 
+table th { background-color: #eee; }
+table tr td { text-indent : 20px; text-align:left; }
+table tr > * { text-indent: 20px;}
+table tr:last-child { color : red;}
+table tr:nth-child(2) {background-color:yellow;}
+table tr:nth-child(3) {background-color:pink;}
+tr:nth-child(2n) {background-color:red;}
+tr:nth-child(2n+1){ background-color: pink; }
+div h3 + ul { background-color: pink; }
+h4 + p {color:red;}
+input[type=text], input[type=password] {height: 25px}
+input[type=checkbox] {width:20px; height:20px; vertical-align: middle; } 
+/* input[type=radio] {margin:15px; }
+input[type=radio] {margin-right:0px; } */
+input[type=radio] {margin: 15px 0 15px 15px}
+input:enabled {background-color:red;}
+input:disabled {color:red; font-weight:bold;}
+input:focus {background-color: yellow;}
+/* input:checked +label { color: blue; font-weight: bold;} */
+/* radio 와 checkbox 각각 checked 를 지정하려면 */
+input[type=radio]:checked +label {color:red; font-weight:bold;}
+input[type=checked]:checked +label {color:green; font-weight:bold;}
+
+ul li:hover {background-color: yellow;}
+ul li:active {background-color: green;}
+</style>
+</head>
+<body>
+<a href='./style_01.html'>스타일홈</a>
+<!-- 
+동작이나 상태와 관련된 가상클래스
+선택자 : enabled  활성화된 선택자(입력 또는 선택이 가능한)
+선택자 : disabled  비활성화된 선택자(입력 또는 선택이 불가능한)
+선택자 : chesked 체크박스나 라디오버튼에서 체큰된 선택자
+선택자 : focus 커서를 갖는 선택자
+선택자 : hover 마우스를 올렸을때 선택된 선택자
+선택자 : active 클릭하고 있는동안 선택된 선택자
+ -->
+
+
+
+<h3>선택자</h3>
+
+<table>
+	<colgroup>
+		<col width='300px'>
+		<col width='600px'>
+	</colgroup>
+	<tr>
+		<th>상위요소 하위요소</th>
+		<td>상위요소에 대한 자손요소에 적용</td>
+	</tr>	
+	<tr>
+		<th>상위요소 > 하위요소</th>
+		<td>상위요소에 대한 자식요소에 적용</td>
+	</tr>	
+	<tr>
+		<th>요소 : first-child</th>
+		<td>요소의 부모입장에서 볼때 첫번째 자식요소</td>
+	</tr>	
+	<tr>
+		<th>요소:last-child(n)</th>
+		<td>요소의 부모입장에서 볼때 마지막번째 자식요소</td>
+	</tr>	
+	<tr>
+		<th>요소: nth-last-child(n)</th>
+		<td>요소의 부모입장에서 뒤에서 부터 볼때 n번째 자식요소
+			:nth-last-child(1) = last-child
+		</td>
+	</tr>	
+	<tr>
+		<th>요소: nth-last-child(2n)</th>
+		<td>짝수번째 자식요소</td>
+	</tr>	
+	<tr>
+		<th>요소: nth-child(2n+1)</th>
+		<td>홀수 번째 자식요소</td>
+	</tr>	
+	<tr>
+		<th>요소1+ 요소2</th>
+		<td>요소1 이후에 나오는 첫번째 형제인 요소2에 대해 적용</td>
+	</tr>	
+</table>
+<div>
+	<h3>요소의 속성 선택자</h3>
+<ul>
+	<li>성명: <input type='text' disabled name='name' value='홍길동'></li>
+	<li>아이디: <input type='text' name='id'></li>
+	<li>비밀번호: <input type='password' name='pw'></li>
+	<li>성별: <input type='radio' name='gender' value='남' id='male'>
+	          <label for='male'>남</label>
+			  <input type='radio' name='gender' value='여' id='female'>
+			  <label for='female'>여</label>
+	<li>취미: <input type='checkbox' name='hobby' id='hobby1' 
+	           value='스포츠'><label for='hobby1'>스포츠</label>
+			  <input type='checkbox' name='hobby' id='hobby2'
+			   value='그림'><label for='hobby2'>그림</label>
+			  <input type='checkbox' name='hobby' id='hobby3' 
+			  value='노래'><label for='hobby3'>노래</label>
+	          <input type='checkbox' name='hobby' id='hobby4'
+	          value='춤'></li><label for='hobby4'>춤</label>
+</ul>
+</div>
+</body>
+</html>

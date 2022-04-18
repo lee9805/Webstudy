@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+a { text-decoration: none; color: inintial; }
+body { margin:0 }
+ul {list-style: none;}
+header {
+	height : 80px; border-bottom: 1px solid #aaa;
+	line-height: 80px; 
+}
+header nav ul { margin : 0; padding: 0; text-align: center;}
+/* ul이 갖는 기본 마진, 패딩 없애기 */
+header nav ul li { 
+	display : inline-block; /* margin-right :30px; */
+	font-size: 20px; font-weight: bold; text-align:left;
+}
+header nav ul li:not(first-child) { margin-left : 30px}
+/* header nav ul li:not(last-child) { margin-left : 30px} */
+/* 네비게이션메뉴가 동일간 간격으로 보여지도록 오른쪽마진을 지정 */
+header nav, section, footer div { width: 1200px; margin: 0 auto; }
+article { margin : 40px auto; }
+article p { line-height: 25px; }
+table p { margin :0; line-height: 22px; }
+article table { border-collapse : collapse; width: 100%; }
+article table thead tr { background-color: #eee; border-bottom : 2px solid #777; }
+article table tr td, article table tr th { padding: 15px 0;}
+/* tr의 자식요소로 td, th 가 있으니 tr의 모든 자식에 적용 */
+article table tbody tr { border-bottom: 1px solid #ccc; }
+
+/* tbody tr 의 첫번째 td의 텍스트를 가운데 정렬  */
+article table tbody tr td:first-child { text-align: center; }
+article table tr > *:first-child  { border-right:1px solid #ccc; }
+/* article table tr td:first-child ,
+article table tr th:first-child { border-right:1px solid #ccc; } */
+article table td:last-child { text-indent: 20px;}
+footer { font-size: 12px; /* text-align: center; */ border-top: 1px solid #ccc;
+         padding: 20px 0; }
+footer p { margin:0; line-height: 20px; }
+footer span {color: red; }
+section h1 { text-align: center; }
+section > p { text-align: center; font-size: 18px; }
+/* article ul {list-style : none; }
+ article ul li { 
+		display: inline-block; border: 1px solid #ddd; height:50px;
+		line-height: 50px; width: 50%; text-align: center;
+		box-sizing: border-box;
+}
+article ul li.on { border: 2px solid #666; border-bottom: 1px solid #fff;} */
+article ul {list-style : none; height: 50px;}
+ article ul li { 
+	 float : left; border: 1px solid #ddd;  height:50px;
+		line-height: 50px; width: 50%; text-align: center;
+		box-sizing: border-box;
+ }
+ article ul li.on { border: 2px solid #666; border-bottom: 1px solid #fff;}
+table#NCS tfoot tr { border-bottom: 1px solid #ccc; }
+table#NCS tfoot th { background-color: #eee; }
+table#NCS tr > *:first-child { border-right : none;}
+/* table#NCS tr td { text-align: center; }
+table#NCS tr td:first-child { text-align: left; }*/
+table#NCS tr td { text-align: left;}
+table#NCS tr td:not(:first-child) { text-align: center;}
+/* 제외의 가상클래스 :not() */
+table#NCS tr td:first-child {text-align: 20px;}
+h4 + p {color:red;}
+/* 선택자1~ 선택자2:
+선택자1 의 형제요소로 선택자1 뒤로 나오는 모든 선택자2 */
+h4 ~ p {background-color : yellow}
+/* p태그의 부모입장에서 볼때 자식요소 2번째 자식요소인 p태그 */
+p:nth-child(2) { font-weight: bold; }
+#notice {text-align :center;}
+#notice td:nth-child(2) {text-align: left; padding-left: 20px}
+#notice td:not(:last-chlid), #notice th:not(:last-child) { border-right : 1px solid #eee } 
+
+#notice td {text-indent: 0;}
+#k-digital { width: 1240px; margin: 100px auto;}
+.slide-wrap {
+	width:12040px; height: 170px;
+	position: relative;
+	overflow: hidden;
+}
+.slide ul { list-style: none; margin: 0; padding: 0;}
+.slide ul li {
+	float: left; box-sizing: border-box;
+	background-color: #eee;
+}
+.slide li:not(:last-child) { margin-right: 20px; }
+.slide { position: absolute; width: 2500px; height: 170px
+}
+.training { width:400px; height: 170px; border: 1px solid #ddd; }
+.training div {margin: 15px }
+.training img { float: left;}
+.training strong { line-height: 48px; margin-left: 10px }
+.training  p { font-size: 15px}
+#k-digital .slide {
+	animation :k-digital 9s steps(3, start) 3s infinite;
+}
+@keyframes k-digital{
+	from{ left: 0px } to { left: -1240px;}
+}
+#category .submenu {
+	 position: absolute;
+	 left: 0; top: 86px; width: 100%; min-width: 1200px;
+	 background-color: #f5f6ff;
+	 border-bottom: 1px solid #ddd;
+	 transform : scaleY(0);
+	 transform-origin: top;
+	 transition:0.3s;
+	 box-shadow: 0 4px 4px 2px;
+	 cursor: pointer;
+	 display: inline-block;
+}
+#category .menu:hover + .submenu {
+	 transform: scaleY(1);
+}
+#category .submenu ul {
+	width: 250px; margin: 20px px; display: inline-block;
+}
+#category .submenu li:not(:first-child) { margin-top: 10px}
+</style>
+<link rel='stylesheet' href=':https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js'></script>
+</head>
+<body>
+<a href='index.html'>메인</a>
+<a href='./transform/timames.html'>박스 이미지 모델</a>
+<header>
+	<nav>
+		<ul id='category'>
+			<li><a class='menu' href=''>훈련과정</a>
+				<div class='submenu'>
+					<nav>
+						<ul>
+							<li><a>카테고리 1 </a></li>
+							<li><a>카테고리 1 </a></li>
+							<li><a>카테고리 1 </a></li>
+							<li><a>카테고리 1 </a></li>
+						</ul>
+					</nav>
+				</div>
+			</li>
+			<li><a class='menu' href=''>지원제도</a>
+				<div class='submenu'>
+					<nav>
+						<ul>
+							<li><a>카테고리 2</a></li>
+							<li><a>카테고리 2</a></li>
+							<li><a>카테고리 2</a></li>
+							<li><a>카테고리 2</a></li>
+						</ul>
+					</nav>
+				</div>
+			</li>
+			<li><a class='menu' href=''>일자리·직업정보</a>
+				<div class='submenu'>
+					<nav>
+						<ul>
+							<li><a>카테고리 3</a></li>
+							<li><a>카테고리 3</a></li>
+							<li><a>카테고리 3</a></li>
+							<li><a>카테고리 3 </a></li>
+						</ul>
+
+					</nav>
+				</div>
+			</li>
+			<li><a class='menu' href=''>지식정보센터</a>
+				<div class='submenu'>
+					<nav>
+						<ul>
+							<li><a>카테고리 4</a></li>
+							<li><a>카테고리 4</a></li>
+							<li><a>카테고리 4</a></li>
+							<li><a>카테고리 4 </a></li>
+						</ul>
+
+					</nav>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</header>
+ <section>
+ <h1>NCS 분류체계</h1>
+ <p>NCS(국가직무능력표준)에 대한 정보를 자세히 확인하실 수 있습니다.</p>
+ <article>
+ 	<ul>
+ 		<li class='on'>NCS소개</li>
+ 		<li>분류체계</li>
+ 	</ul>
+ </article>
+ 
+ 	<h3>소개</h3>
+ 	<article>
+ 		<h4>•국가직무능력표준(NCS)란?</h4>
+ 		<p>국가직무능력표준(NCS, National Competency Standards)는 산업 현장에서 직무를
+     수행하기 위해 요구되는 지식·기술·소양 등의 내용을 국가가 산업 부문별 체계화한 것으로,
+     산업현장의 직무를 성공적으로 수행하기 위해 필요한 능력(지식,기술,태도)을 국가적
+     차원에서 표준화한 것을 의미합니다.</p>
+ 	</article>
+ 	<article>
+ 		<h4>• 분류체계</h4>
+ 		<p>국가직무능력표준의 분류체계는 직무의 유형을 중심으로 국가직무능력표중의 단계적 
+     구성을 나타내는 것으로, 국가직무능력표준 개발의 전체적인 로드맵을 제시
+      <br>
+     <br>
+    한국고용직업분류(KECO : Korean Employment Classification of Occupations)를 중심으로, 
+    한국표준직업분류, 한국표준산업분류 등을 참고하여 분류하였으며, 
+    ‘대분류(24) → 중분류(81) → 소분류(261) → 세분류(1032)개’의 순으로 구성</p>
+ 	</article>
+ 	<article>
+ 		<h4>• 세부 분류기준</h4>
+ 		<table>
+ 		 	<colgroup>
+ 		 		<col width='100px'>
+ 		 	</colgroup>
+ 			<thead>
+ 			 	<tr><th>분류</th><th>분류 기준</th></tr>
+ 			</thead>
+ 			<tbody>
+ 				<tr>
+ 					<td>대분류</td>
+ 					<td><p>직능유형이 유사한 분야(한국고용직업분류 참조)</p></td>
+ 				</tr>
+ 				<tr>
+ 					<td>중분류</td>
+ 					<td>
+ 					<p>대분류 내에서 직능유형이 유사한 분야</p>
+            		<p>대분류 내에서 산업이 유사한 분야</p>
+            		<p>대분류 내에서 노동시장이 독립적으로 형성되거나 경력개발경로가 유사한 분야</p>
+            		<p>중분류 수준에서 산업별 인적자원개발협의체(SC)가 존재하는 분야</p></td>
+ 				</tr>
+ 				<tr>
+ 					<td>소분류</td>
+ 					<td>
+ 						<p>중분류 내에서 직능유형이 유사한 분야</p>
+           			    <p>소분류 수준에서 산업별인적자원개발협의체(SC)가 존재하는 분야</p></td>
+ 				</tr>
+ 				<tr>
+ 					<td>세분류</td>
+ 					<td>
+ 						<p>소분류 내에서 직능유형이 유사한 분야</p>
+           			    <p>한국고용직업분류의 직업 중 대표 직무</td>
+ 				</tr>
+ 			</tbody>
+ 		</table>
+ 	</article>
+ 	
+ 	<article>
+ 	 	<h4>·NCS 분류체계</h4>
+ 	 	<table id='NCS'>
+ 	 	<colgroup>
+ 	 		<col >
+ 	 		<col width='250px'>
+ 	 		<col width='250px'>
+ 	 		<col width='250px'>
+ 	 	</colgroup>
+ 	 		<thead>
+ 	 			<tr>
+ 	 				<th>대분류</th>
+ 	 			    <th>중분류</th>
+ 	 			    <th>소분류</th>
+ 	 			    <th>세분류</th>
+ 	 			</tr>    
+ 	 		</thead>
+ 	 		<tbody>
+ 	 			<tr>
+ 	 				<td>01. 사업관리</td>
+ 	 			    <td>1</td>
+ 	 			    <td>2</td>
+ 	 			    <td>5</td>
+ 	 			</tr>
+ 	 			<tr>
+ 	 				<td>02. 경영·회계·사무</td>
+ 	 			    <td>4</td>
+ 	 			    <td>11</td>
+ 	 			    <td>27</td>
+ 	 			</tr>
+ 	 			<tr>
+ 	 				<td>03. 금융·보험</td>
+ 	 			    <td>2</td>
+ 	 			    <td>9</td>
+ 	 			    <td>36</td>
+ 	 			</tr>
+ 	 		</tbody>
+ 	 		<tfoot>
+ 	 			<tr><th>계</th>
+ 	 				<td>82</td>
+ 	 				<td>267</td>
+ 	 				<td>1049</td>
+ 	 			</tr>
+ 	 		</tfoot>
+ 	 	</table>
+ 	</article>
+ 	<article>
+ 	<div id='k-digital'>
+	<div class='slide-wrap'>
+		<div class='slide'>
+			<ul >
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>1111</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>22222</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>33333</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>44444</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>5555</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>6666</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</article>
+ 	<article>
+ 	<table id='notice'>
+	<colgroup>
+		<col width='50px'>
+		<col width='450px'>
+		<col width='70px'>
+		<col width='110px'>
+		<col width='50px'>
+		<col width='50px'>
+	</colgroup>
+	<thead>
+		<tr><th>번호</th>
+		    <th>제목</th>
+		    <th>작성자</th>
+		    <th>등록일</th>
+		    <th>첨부</th>
+		    <th>첨부</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td>1694</td>
+			<td>[공지] 수강신청 장애 및 HRD-Net 접속지연으로 인한 출석직
+			    권처리 협조 요청(처리완료)</td>
+			<td>홍원기</td>
+			<td>2022-03-28</td>
+			<td><i class="fa-solid fa-file"></i></td>
+			<td>1,653</td>
+		</tr>
+		<tr><td>1686</td>
+			<td>[공지] HRD-Net 업데이트로 인한 서비스 일시 중지 안내 - 
+			    2.25 (금) 12:20 ~ 12:50</td>
+			<td>이태성</td>
+			<td>2022-02-25</td>
+			<td></td>
+			<td>2,938</td>
+		</tr>
+		<tr><td>1693</td>
+			<td>안내] 내일배움카드 진단상담 오류 관련 안내(조치완료)</td>
+			<td>홍원기</td>
+			<td>2022-03-22</td>
+			<td><i class="fa-solid fa-file"></i></td>
+			<td>3,662</td>
+		</tr>
+		<tr><td>1692</td>
+			<td>온라인청년센터 청년 서포터즈 2기 모집 안내</td>
+			<td>홍원기</td>
+			<td>2022-03-17</td>
+			<td></td>
+			<td>3,321</td>
+		</tr>
+	</tbody>
+</table>
+ 	</article>
+ 	
+ 	<footer>
+ 		<div>
+ 		 <p>HRD-Net은 <span>통신판매중개자</span>이며, 통신판매의 당사자가 아닙니다. 상품(훈련), 상품(훈련)정보, 거래에 관한<span>의무과 책임은 판매자(훈련기관</span> )에게 있습니다
+ 		 <>(27740) 충청북도 음성군 맹동면 태정로 6 (두성리, 한국고용정보원) HRD-Net 시스템관련문의 : 1577-7114(유료), 제도/자격문의 : 고용노동부1350(유료)</p>
+         <p>Copyright ⓒ 2016. Human Resources Development Service Of Korea. All Rights Reserved.</p>
+		</div> 	
+ 	</footer>
+ </section>
+
+</body>
+</html>

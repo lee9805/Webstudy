@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content=' width=device-width, initial-scale=1'>
+<title>Insert title here</title>
+<style>
+body { margin : 0}
+ul { margin :0; padding: 0; list-style: none; }
+header { margin : 0 auto; padding: 0 50px; }
+header { font-size: 18px; font-weight: bold; 
+		border-bottom: 1px solid #ccc;
+}
+header ul { margin: 30px 0 20px; display: inline-block; }
+header li { float: left; padding-bottom:  10px; }
+header li:not(:last-child) { margin-right: 50px;}
+header li.on { border-bottom: 3px solid green; color: red;}
+
+#tb-list table { border-collapse: collapse; width: 100%;
+	text-align: center;
+}
+#tb-list table thead tr {
+	background-color: #ccc; border-top: 2px solid #666;
+}
+#tb-list td, #tb-list th { padding : 15px 0;}
+#tb-list tbody tr { border-top: 1px solid #aaa;	
+}
+#tb-list tbody tr:last-child { border-bottom: 1px solid #aaa;}
+#tb-list tbody td:nth-child(2) { 
+	text-align: left; font-weight: bold;
+}
+#tb-list tbody td:nth-child(2):hover {
+	text-decoration: underline; color: blue; cursor: pointer;
+}
+@media screen and (max-width: 1023px) {
+	header, section, footer { padding: 0 20px; }
+}
+@media screen and (min-width:414px) and (max-width: 1023px) {
+	article table { width: 950px; }
+}
+@media screen and (max-width:767px){
+	header ul li { width: 100% }
+}
+@media screen and (max-width: 414px){
+	article#td-list table colgroup, article#td-list table thead,
+	article#td-list table tbody td:first-child 
+	{ display :none;}
+	articletable tbody tr:first-child { border-top: 2px solid #666; }
+	article#tb-list table tbody td { display: block; text-align: left; 
+								padding: 5px 0  0; 
+	}
+	article#tb-list table tbody td:last-child { padding-bottom: 5px; }
+}
+footer {
+	font-size: 14px; height: 100px; margin-top: 50px; 
+}
+footer * {margin: 0 0 5px; }
+address { font: inherit;}
+</style>
+</head>
+<body>
+<!-- 
+미디어쿼리 : 디바이스 크기에 맞춰 스타일을 
+		     각각 지정해서 화면을 다르게 표현하는 방식
+모든 디바이스 all , 컴퓨터화면(스마트폰 화면) screen, 인쇄관련 print
+연산자 and, or -media screen and print
+				media screen and (min-width: 768px)
+width, height media screen and (min-width: 768px)
+							and (min-width: 768px)
+							and (min-height: 768px)
+
+ -->
+ <header>
+ 	<nav>
+ 		<ul>
+ 			<li>1333</li>
+ 			<li>dlthwjd</li>
+ 			<li>rkskekfl</li>
+ 			<li class='on'>akwdkawkd</li> 			
+ 		</ul>
+ 	</nav>
+ </header>
+ <section>
+ 	<article id='tb-list'>
+ 		<h3>ㅇㅇㅇㅇㅇ</h3>
+ 		<table>
+ 		<colgroup>
+ 			<col width="80px">
+ 			<col>
+ 			<col width="100px">
+ 			<col width="120px">
+ 		</colgroup>
+ 			<thead>
+ 				<tr><th>d</th>
+ 					<th>ff</th>
+ 					<th>eee</th>
+ 					<th>wwww</th>
+ 					<th>qqq</th></tr>
+ 			</thead>
+ 			<tbody>
+ 				<tr><td>aaaaaaaa</td>
+ 					<td>dddddd</td>
+ 					<td>eeeeeee</td>
+ 					<td>gggggggg</td>
+ 					<td>ggggg</td>
+ 				</tr>
+ 			<tbody>
+ 				<tr><td>eeeeeee</td>
+ 					<td>gggggggdddddddddddd</td>
+ 					<td>hhhhhhhhhheeeeeeeeeeee</td>
+ 					<td>3333333333gggggg</td>
+ 					<td>gggggrrrrrrrrr</td>
+ 				</tr>
+ 			<tbody>
+ 				<tr><td>55555555</td>
+ 					<td>6666666666dddddddddd</td>
+ 					<td>777777777eeeeeeeee</td>
+ 					<td>322222222ggggggg</td>
+ 					<td>gggg5555555g</td>
+ 				</tr>
+ 			</tbody>
+ 		</table>
+ 	</article>
+ </section>
+<footer>
+	<div>
+		<address>광주광역시 한국경영원 인재개발원</address>
+		<p>한국경영원 dkdkdkdkd</p>
+	</div>
+</footer>
+</body>
+</html>
+
+
+
+
+

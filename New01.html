@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#k-digital { width: 1240px; margin: 100px auto;}
+.slide-wrap {
+	width:1240px; height: 170px;
+	position: relative;
+	overflow: hidden;
+}
+.slide ul { list-style: none; margin: 0; padding: 0;}
+.slide ul li {
+	float: left; box-sizing: border-box;
+	background-color: #eee;
+}
+.slide li:not(:last-child) { margin-right: 20px; }
+.slide { position: absolute; width: 2500px; height: 170px
+}
+.training { width:400px; height: 170px; border: 1px solid #ddd; }
+.training div {margin: 15px }
+.training img { float: left;}
+.training strong { line-height: 48px; margin-left: 10px }
+.training  p { font-size: 15px}
+#k-digital .slide {
+	animation :k-digital 9s steps(3, start) 3s infinite;
+}
+@keyframes k-digital{
+	from{ left: 0px } to { left: -1260px;}
+}
+
+</style>
+</head>
+<body>
+<div id='k-digital'>
+	<div class='slide-wrap'>
+		<div class='slide'>
+			<ul >
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>1111</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>22222</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>33333</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>44444</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>5555</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+				<li class='training'>
+					<div><img src="images/ss.png"><strong>6666</strong>
+						<p>ddddddd</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

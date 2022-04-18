@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, inirial-scale=1'>
+<title>Insert title here</title>
+<style>
+body { margin: 0 auto; }
+ul { list-style: none; padding: 0; }
+header {
+	padding: 0 100px; font-size: 18px; font-weight: bold;
+	width: calc(100% - 200px); display: flex;
+	justify-content: flex-start; border-bottom: 1px solid #aaa;
+}
+header nav { width: 65%; }
+header #user { width: 35%; font-size: 16px; }
+
+header ul {width: 100%; display: flex; 
+			flex-wrap: wrap;
+}
+header nav ul { justify-content: space-between; 
+}
+header #user ul { justify-content: flex-end;}
+#user input[type=button] {margin-left: 10px;}
+
+
+#cat { display: none; }
+#cat #cat_open { position: fixed; left: -88888888888888888999999px}
+#cat_menu ul {flex-direction: column; justify-content: center; }
+#cat_menu li { padding: 5px 0 5px; border-bottom: 1px solid #aaa; }
+#cat_menu{
+	position: absolute; left: 0px; width: 100%;
+	background-color: #fff; transform-origin: top;
+	transition:0.3s; transform: scaleY(0);
+}
+#cat_open:checked ~ #cat_menu {
+	transform: scaleY(1); 
+}
+section {padding : 0 100px; width: calc(100% - 200px)}
+article { padding: 50px 0; width: 100% }
+article img { width: 300px; height: 200px;}
+section ul {justify-content: center; }
+
+footer {
+	padding: 20px 100px; border-top: 1px solid #aaa;
+	font-size: 14px; display: flex; flex-wrap: wrap;
+}
+footer div { display: flex; flex-direction: column; }
+address { font: inherit; }
+footer div * { margin: 5px 0; }
+footer span { margin-right: 20px; }
+
+
+@media screen and (max-width:1023px) {
+	header, footer, section {padding: 0 40px;}
+	header, footer, section { width: calc(100% - 80px) }
+}
+@media screen and (max-width:711px) {
+	header, footer, section {padding: 0 30px;}
+	header, footer, section { width: calc(100% - 60px) }
+	header nav { width: 35% }
+	header #user { width: 65% }
+	#cat {display: block;}
+	#cat ~ li {display: none; }
+}
+@media screen and (max-width:414px) {
+	header, footer, section {padding: 0 20px;}
+	header, footer, section { width: calc(100% - 40px) }
+	footer span { display: none;}
+	footer div { margin: 5px 0;}
+}
+</style>
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+			<li id='cat'><input type='checkbox' id='cat_open'>
+			<label for='cat_open'><img src='../images/ss.png'>
+			</label>
+			<div id='cat_menu'>
+				<ul>
+					<li>메인1</li>
+					<li>메인2</li>
+					<li>메인3</li>
+					<li>메인4</li>
+					<li>메인5</li>
+				</ul>
+			</div>
+			</li>
+			<li>메인 메뉴1</li>
+			<li>메인 메뉴2</li>
+			<li>메인 메뉴3</li>
+			<li>메인 메뉴4</li>
+			<li>메인 메뉴5</li>
+		</ul>
+	</nav>
+	<div id='user'>
+		<ul>
+			<li>이이이</li>
+			<li><input type='button' value='로그아웃' ></li>
+			<li></li>
+		</ul>
+	</div>
+</header>
+<section>
+	<article>
+		<ul>
+			<li><img src='../images/cat-7032641_1280.jpg'></li>
+			<li><img src='../images/forest-7054278_1280.jpg'></li>
+			<li><img src='../images/botanical-7086609_1280.jpg'></li>
+			<li><img src='../images/bird-7088667_1280.jpg'></li>
+			<li><img src='../images/abstract-7050549_1280.jpg'></li>
+		</ul>
+	</article>
+</section>
+<footer>
+	<div>
+		<span><img src='../images/logo.png'></span>
+		<adress>가나다라마바사아자차카타파하</adress>
+		<p>abcdefghijklnmopqrxtuvwyz</p>
+	</div>
+</footer>
+
+</body>
+</html>

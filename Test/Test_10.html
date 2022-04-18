@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style >
+div#main { border: 1px solid #ccc; }
+ul {list-style: none;  }
+header nav { width: 1040px; margin: 0 auto; border-bottom: 1px solid #ccc; }
+ul li { display: inline-block; width: 150px;}
+#header { width: 100px; height: 50px;}
+#content { width: 100px; height: 100px}
+footer p { font-size: 0.7em;}
+table {
+    border-collapse: collapse; /* border: 1px solid #ccc */; /* padding: 10px; */}
+th, td {  padding: 10px; }
+tr th#first { background-color: #eee; }
+a { text-decoration: none; color: inintial; }
+h4 + p {color:red;}
+/* 선택자1~ 선택자2:
+선택자1 의 형제요소로 선택자1 뒤로 나오는 모든 선택자2 */
+h4 ~ p {background-color : yellow}
+</style>
+</head>
+<body>
+<a href='Test_00.html'>0번</a><br>
+<div id='main'>
+   <header>
+     <nav>
+       <ul>
+          <li><a href='#'>훈련과정</a></li>
+          <li><a href='#'>지원제도</a></li>
+          <li><a href='#'>일자리·직업정보</a></li>
+          <li><a href='#'>지식정보센터</a></li>
+       </ul>
+     </nav>
+   </header>
+   <div id='header'>
+     <h2>소개</h2>
+   </div>
+<div class='content'>
+     <h5>•국가직무능력표준(NCS)란?</h5>
+     <p>국가직무능력표준(NCS, National Competency Standards)는 산업 현장에서 직무를
+     수행하기 위해 요구되는 지식·기술·소양 등의 내용을 국가가 산업 부문별 체계화한 것으로,
+     산업현장의 직무를 성공적으로 수행하기 위해 필요한 능력(지식,기술,태도)을 국가적
+     차원에서 표준화한 것을 의미합니다.</p>
+</div>
+<div class='content'>
+     <h5>• 분류체계</h5>
+     <p>국가직무능력표준의 분류체계는 직무의 유형을 중심으로 국가직무능력표중의 단계적 
+     구성을 나타내는 것으로, 국가직무능력표준 개발의 전체적인 로드맵을 제시
+     <br>
+     <br>
+    한국고용직업분류(KECO : Korean Employment Classification of Occupations)를 중심으로, 
+    한국표준직업분류, 한국표준산업분류 등을 참고하여 분류하였으며, 
+    ‘대분류(24) → 중분류(81) → 소분류(261) → 세분류(1032)개’의 순으로 구성
+</div>
+<div class='content'>
+     <h5>• 세부 분류기준</h5>
+     <table>
+     <colgroup>
+        <col width>
+        <col >
+     </colgroup>
+        <tr><th id='first'>분류</th>
+            <th id='first'>분류 기준</th>
+        </tr>
+        <tr><th>대분류</th>
+            <td>직능유형이 유사한 분야(한국고용직업분류 참조)</td>
+        </tr>
+        <tr><th>중분류</th>
+            <td>대분류 내에서 직능유형이 유사한 분야<br>
+            대분류 내에서 산업이 유사한 분야<br>
+            대분류 내에서 노동시장이 독립적으로 형성되거나 경력개발경로가 유사한 분야<br>
+            중분류 수준에서 산업별 인적자원개발협의체(SC)가 존재하는 분야<br>
+            </td>
+        </tr>
+        <tr><th>소분류</th>
+            <td>중분류 내에서 직능유형이 유사한 분야<br>
+            소분류 수준에서 산업별인적자원개발협의체(SC)가 존재하는 분야</td>
+        </tr>
+        <tr><th>세분류</th>
+            <td>소분류 내에서 직능유형이 유사한 분야<br>
+            한국고용직업분류의 직업 중 대표 직무</td>
+        </tr>
+     </table>
+</div>
+<hr>
+<div>
+   <footer>
+     <p>(27740) 충청북도 음성군 맹동면 태정로 6 (두성리, 한국고용정보원) HRD-Net 
+        시스템관련문의 : 1577-7114(유료), 제도/자격문의 : 고용노동부1350(유료)
+        Copyright ⓒ 2016. Human Resources Development Service Of Korea. All Rights Reserved.
+   </footer>
+</div>
+</div>
+
+
+</body>
+</html>
